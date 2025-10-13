@@ -1,0 +1,72 @@
+{
+  "name": "@gaddario98/react-ionic-core",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "peerDependencies": {
+    "@capacitor/core": "*",
+    "@capacitor/push-notifications": "*",
+    "@gaddario98/react-auth": "*",
+    "@gaddario98/react-form": "*",
+    "@gaddario98/react-ionic-pages": "*",
+    "@gaddario98/react-ionic-state": "*",
+    "@gaddario98/react-ionic-utiles": "*",
+    "@gaddario98/react-localization": "*",
+    "@gaddario98/react-providers": "*",
+    "@gaddario98/react-queries": "*",
+    "@ionic/react": "*",
+    "@tanstack/query-async-storage-persister": "*",
+    "@tanstack/react-query-persist-client": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/rollup-plugin-peer-deps-external": "^2",
+    "rollup": "^4.40.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "typescript": "^5.8.3"
+  },
+  "exports": {
+    "./auth": "./dist/auth/index.mjs",
+    "./config": "./dist/config/index.mjs",
+    "./form": "./dist/form/index.mjs",
+    "./localization": "./dist/localization/index.mjs",
+    "./pages": "./dist/pages/index.mjs",
+    "./providers": "./dist/providers/index.mjs",
+    "./queries": "./dist/queries/index.mjs",
+    "./state": "./dist/state/index.mjs",
+    "./utiles": "./dist/utiles/index.mjs",
+    ".": "./index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gaddario98/react-ionic-core"
+  },
+  "keywords": [
+    "react-ionic",
+    "ionic",
+    "react",
+    "utiles",
+    "state",
+    "pages",
+    "providers",
+    "gaddario98"
+  ],
+  "author": "Giosuè Addario",
+  "bugs": {
+    "url": "https://github.com/gaddario98/react-ionic-core/issues"
+  },
+  "homepage": "https://github.com/gaddario98/react-ionic-core#readme"
+}
