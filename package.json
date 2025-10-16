@@ -1,8 +1,8 @@
 {
   "name": "@gaddario98/react-ionic-core",
   "version": "1.0.0",
-  "main": "index.ts",
-  "module": "index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "type": "module",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c rollup.config.js && rollup -c rollup.dts.config.js"
   },
   "peerDependencies": {
     "@capacitor/core": "*",
@@ -39,16 +39,72 @@
     "typescript": "^5.8.3"
   },
   "exports": {
-    "./auth": "./dist/auth/index.mjs",
-    "./config": "./dist/config/index.mjs",
-    "./form": "./dist/form/index.mjs",
-    "./localization": "./dist/localization/index.mjs",
-    "./pages": "./dist/pages/index.mjs",
-    "./providers": "./dist/providers/index.mjs",
-    "./queries": "./dist/queries/index.mjs",
-    "./state": "./dist/state/index.mjs",
-    "./utiles": "./dist/utiles/index.mjs",
-    ".": "./index.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./auth": {
+      "types": "./dist/auth/index.d.ts",
+      "import": "./dist/auth/index.mjs",
+      "require": "./dist/auth/index.js",
+      "default": "./dist/auth/index.js"
+    },
+    "./config": {
+      "types": "./dist/config/index.d.ts",
+      "import": "./dist/config/index.mjs",
+      "require": "./dist/config/index.js",
+      "default": "./dist/config/index.js"
+    },
+    "./form": {
+      "types": "./dist/form/index.d.ts",
+      "import": "./dist/form/index.mjs",
+      "require": "./dist/form/index.js",
+      "default": "./dist/form/index.js"
+    },
+    "./localization": {
+      "types": "./dist/localization/index.d.ts",
+      "import": "./dist/localization/index.mjs",
+      "require": "./dist/localization/index.js",
+      "default": "./dist/localization/index.js"
+    },
+    "./notifications": {
+      "types": "./dist/notifications/index.d.ts",
+      "import": "./dist/notifications/index.mjs",
+      "require": "./dist/notifications/index.js",
+      "default": "./dist/notifications/index.js"
+    },
+    "./pages": {
+      "types": "./dist/pages/index.d.ts",
+      "import": "./dist/pages/index.mjs",
+      "require": "./dist/pages/index.js",
+      "default": "./dist/pages/index.js"
+    },
+    "./providers": {
+      "types": "./dist/providers/index.d.ts",
+      "import": "./dist/providers/index.mjs",
+      "require": "./dist/providers/index.js",
+      "default": "./dist/providers/index.js"
+    },
+    "./queries": {
+      "types": "./dist/queries/index.d.ts",
+      "import": "./dist/queries/index.mjs",
+      "require": "./dist/queries/index.js",
+      "default": "./dist/queries/index.js"
+    },
+    "./state": {
+      "types": "./dist/state/index.d.ts",
+      "import": "./dist/state/index.mjs",
+      "require": "./dist/state/index.js",
+      "default": "./dist/state/index.js"
+    },
+    "./utiles": {
+      "types": "./dist/utiles/index.d.ts",
+      "import": "./dist/utiles/index.mjs",
+      "require": "./dist/utiles/index.js",
+      "default": "./dist/utiles/index.js"
+    }
   },
   "repository": {
     "type": "git",
