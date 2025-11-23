@@ -1,111 +1,121 @@
 {
   "name": "@gaddario98/react-ionic-core",
-  "version": "1.0.2",
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "version": "1.0.22",
   "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
   "license": "MIT",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rollup -c rollup.config.js && rollup -c rollup.dts.config.js"
-  },
-  "peerDependencies": {
-    "@capacitor/core": "*",
-    "@capacitor/push-notifications": "*",
-    "@gaddario98/react-auth": "^1.0.16",
-    "@gaddario98/react-form": "^1.0.20",
-    "@gaddario98/react-ionic-pages": "^1.0.2",
-    "@gaddario98/react-ionic-state": "^1.0.2",
-    "@gaddario98/react-ionic-utiles": "^1.0.2",
-    "@gaddario98/react-localization": "^1.0.17",
-    "@gaddario98/react-providers": "^1.0.17",
-    "@gaddario98/react-queries": "^1.0.21",
-    "@ionic/react": "*",
-    "@tanstack/query-async-storage-persister": "*",
-    "@tanstack/react-query-persist-client": "*",
-    "@types/react": "*",
-    "@types/react-dom": "*"
+    "build": "rollup -c rollup.config.js && rollup -c rollup.dts.config.js",
+    "prepublishOnly": "yarn build"
   },
   "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-typescript": "^12.1.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
     "@types/rollup-plugin-peer-deps-external": "^2",
+    "babel-plugin-react-compiler": "1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "rollup": "^4.40.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "typescript": "^5.8.3"
   },
+  "dependencies": {
+    "@gaddario98/react-auth": "^1.0.16",
+    "@gaddario98/react-form": "^1.0.20",
+    "@gaddario98/react-ionic-pages": "^1.0.21",
+    "@gaddario98/react-ionic-state": "^1.0.21",
+    "@gaddario98/react-ionic-utiles": "^1.0.21",
+    "@gaddario98/react-localization": "^1.0.17",
+    "@gaddario98/react-providers": "^1.0.17",
+    "@gaddario98/react-queries": "^1.0.21"
+  },
+  "peerDependencies": {
+    "@capacitor/core": "*",
+    "@capacitor/push-notifications": "*",
+    "@ionic/react": "*",
+    "@tanstack/query-async-storage-persister": "*",
+    "@tanstack/react-query-persist-client": "*",
+    "react": ">=18.0.0 <20.0.0"
+  },
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js",
-      "default": "./dist/index.js"
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.mjs"
     },
     "./auth": {
-      "types": "./dist/auth/index.d.ts",
-      "import": "./dist/auth/index.mjs",
-      "require": "./dist/auth/index.js",
-      "default": "./dist/auth/index.js"
+      "types": "./dist/types/auth.d.ts",
+      "import": "./dist/esm/auth.mjs",
+      "require": "./dist/cjs/auth.js",
+      "default": "./dist/esm/auth.mjs"
     },
     "./config": {
-      "types": "./dist/config/index.d.ts",
-      "import": "./dist/config/index.mjs",
-      "require": "./dist/config/index.js",
-      "default": "./dist/config/index.js"
+      "types": "./dist/types/config.d.ts",
+      "import": "./dist/esm/config.mjs",
+      "require": "./dist/cjs/config.js",
+      "default": "./dist/esm/config.mjs"
     },
     "./form": {
-      "types": "./dist/form/index.d.ts",
-      "import": "./dist/form/index.mjs",
-      "require": "./dist/form/index.js",
-      "default": "./dist/form/index.js"
+      "types": "./dist/types/form.d.ts",
+      "import": "./dist/esm/form.mjs",
+      "require": "./dist/cjs/form.js",
+      "default": "./dist/esm/form.mjs"
     },
     "./localization": {
-      "types": "./dist/localization/index.d.ts",
-      "import": "./dist/localization/index.mjs",
-      "require": "./dist/localization/index.js",
-      "default": "./dist/localization/index.js"
+      "types": "./dist/types/localization.d.ts",
+      "import": "./dist/esm/localization.mjs",
+      "require": "./dist/cjs/localization.js",
+      "default": "./dist/esm/localization.mjs"
     },
     "./notifications": {
-      "types": "./dist/notifications/index.d.ts",
-      "import": "./dist/notifications/index.mjs",
-      "require": "./dist/notifications/index.js",
-      "default": "./dist/notifications/index.js"
+      "types": "./dist/types/notifications.d.ts",
+      "import": "./dist/esm/notifications.mjs",
+      "require": "./dist/cjs/notifications.js",
+      "default": "./dist/esm/notifications.mjs"
     },
     "./pages": {
-      "types": "./dist/pages/index.d.ts",
-      "import": "./dist/pages/index.mjs",
-      "require": "./dist/pages/index.js",
-      "default": "./dist/pages/index.js"
+      "types": "./dist/types/pages.d.ts",
+      "import": "./dist/esm/pages.mjs",
+      "require": "./dist/cjs/pages.js",
+      "default": "./dist/esm/pages.mjs"
     },
     "./providers": {
-      "types": "./dist/providers/index.d.ts",
-      "import": "./dist/providers/index.mjs",
-      "require": "./dist/providers/index.js",
-      "default": "./dist/providers/index.js"
+      "types": "./dist/types/providers.d.ts",
+      "import": "./dist/esm/providers.mjs",
+      "require": "./dist/cjs/providers.js",
+      "default": "./dist/esm/providers.mjs"
     },
     "./queries": {
-      "types": "./dist/queries/index.d.ts",
-      "import": "./dist/queries/index.mjs",
-      "require": "./dist/queries/index.js",
-      "default": "./dist/queries/index.js"
+      "types": "./dist/types/queries.d.ts",
+      "import": "./dist/esm/queries.mjs",
+      "require": "./dist/cjs/queries.js",
+      "default": "./dist/esm/queries.mjs"
     },
     "./state": {
-      "types": "./dist/state/index.d.ts",
-      "import": "./dist/state/index.mjs",
-      "require": "./dist/state/index.js",
-      "default": "./dist/state/index.js"
+      "types": "./dist/types/state.d.ts",
+      "import": "./dist/esm/state.mjs",
+      "require": "./dist/cjs/state.js",
+      "default": "./dist/esm/state.mjs"
     },
     "./utiles": {
-      "types": "./dist/utiles/index.d.ts",
-      "import": "./dist/utiles/index.mjs",
-      "require": "./dist/utiles/index.js",
-      "default": "./dist/utiles/index.js"
+      "types": "./dist/types/utiles.d.ts",
+      "import": "./dist/esm/utiles.mjs",
+      "require": "./dist/cjs/utiles.js",
+      "default": "./dist/esm/utiles.mjs"
     }
   },
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/gaddario98/react-ionic-core"
